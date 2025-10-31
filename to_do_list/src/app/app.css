@@ -1,0 +1,14 @@
+.navbar{
+  background-color: cornflowerblue !important;
+}
+
+.body{
+  background-color: lavender;
+  width: 100vw;
+ height: 100vh;
+
+}
+
+.navbar-brand{
+  color: white;
+}

@@ -1,0 +1,16 @@
+<div class="lists-bar">
+  <div class="sidebar">
+    <ul class="menu">
+      <li (click)="openTaks(item.name)" class="menu-item" *ngFor="let item of menuItems" [class.active]="selectedListName === item.name">
+        <span>{{ item.name }}</span>
+        <span class="count">{{ item.count }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="lists-tasks">
+    <app-tasks [listName]="selectedListName" (tasksChanged)="onTasksChanged()"></app-tasks>
+  </div>
+</div>
+
+
+

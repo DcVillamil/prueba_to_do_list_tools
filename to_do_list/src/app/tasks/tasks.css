@@ -1,0 +1,76 @@
+.create-task{
+  color: white;
+  background-color: cornflowerblue;
+}
+
+.taskList{
+  width: 100%;
+}
+
+.task-input-container {
+  margin-bottom: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.delete-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.delete-icon:hover {
+  color: #c82333;
+}
+
+.edit-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  color: cornflowerblue;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.edit-icon:hover {
+  color: #5a7fd4;
+}
+
+.list-item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.list-item label {
+  cursor: pointer;
+  flex: 1;
+  user-select: none;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-task-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 2px solid cornflowerblue;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.edit-task-input:focus {
+  border-color: #5a7fd4;
+  box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
+}
+

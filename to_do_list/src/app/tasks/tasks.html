@@ -1,0 +1,30 @@
+<div class="taskList">
+  <div class="task-input-container">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Escribe una tarea (Enter)"
+      [(ngModel)]="newTaskName"
+      (keydown)="onEnterKey($event)"
+    />
+  </div>
+  <div *ngFor="let task of tasks; let i = index" class="list-item">
+    <i class="fas fa-trash delete-icon" (click)="deleteTask(i)" title="Eliminar tarea"></i>
+    <i class="fas fa-pen edit-icon" (click)="editTask(i)" title="Editar tarea" *ngIf="editIndex !== i"></i>
+    <input
+      type="checkbox"
+      [id]="'task-' + i"
+      [(ngModel)]="task.completed"
+      (change)="saveTask()"
+    />
+    <label [for]="'task-' + i" *ngIf="editIndex !== i">{{ task.name }}</label>
+    <input
+      *ngIf="editIndex === i"
+      type="text"
+      class="edit-task-input"
+      [(ngModel)]="editTaskName"
+      (keydown)="onEditKeyDown($event, i)"
+      (blur)="saveEditTask(i)"
+    />
+  </div>
+</div>
